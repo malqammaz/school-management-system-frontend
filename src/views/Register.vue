@@ -30,13 +30,13 @@
         <div>
           <label class="block text-sm font-medium text-gray-700 mb-1">Date of Birth</label>
           <input 
-            v-model="form.dob" 
+            v-model="form.date_of_birth" 
             type="date"
             required
             :disabled="loading"
             class="input-field disabled:bg-gray-100"
           />
-          <div v-if="errors.dob" class="mt-1 text-sm text-red-600">{{ errors.dob[0] }}</div>
+          <div v-if="errors.date_of_birth" class="mt-1 text-sm text-red-600">{{ errors.date_of_birth[0] }}</div>
         </div>
         
         <div>
@@ -136,7 +136,7 @@ const errors = ref({});
 
 const form = ref({
   name: '',
-  dob: '',
+  date_of_birth: '',
   email: '',
   role: 'student',
   password: '',
@@ -145,7 +145,7 @@ const form = ref({
 
 const isFormValid = computed(() => {
   return form.value.name && 
-         form.value.dob &&
+         form.value.date_of_birth &&
          form.value.email && 
          form.value.role &&
          form.value.password && 
