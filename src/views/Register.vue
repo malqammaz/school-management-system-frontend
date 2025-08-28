@@ -26,32 +26,6 @@
           <div v-if="errors.name" class="mt-1 text-sm text-red-600">{{ errors.name[0] }}</div>
         </div>
 
-        <div class="grid grid-cols-2 gap-3">
-          <div>
-            <label class="block text-sm font-medium text-gray-700 mb-1">Age</label>
-            <input 
-              v-model.number="form.age" 
-              type="number" min="1" max="120"
-              placeholder="Age"
-              required
-              :disabled="loading"
-              class="input-field disabled:bg-gray-100"
-            />
-            <div v-if="errors.age" class="mt-1 text-sm text-red-600">{{ errors.age[0] }}</div>
-          </div>
-          <div>
-            <label class="block text-sm font-medium text-gray-700 mb-1">Country</label>
-            <input 
-              v-model="form.country" 
-              type="text" 
-              placeholder="Country"
-              required
-              :disabled="loading"
-              class="input-field disabled:bg-gray-100"
-            />
-            <div v-if="errors.country" class="mt-1 text-sm text-red-600">{{ errors.country[0] }}</div>
-          </div>
-        </div>
 
         <div>
           <label class="block text-sm font-medium text-gray-700 mb-1">Date of Birth</label>
@@ -162,8 +136,6 @@ const errors = ref({});
 
 const form = ref({
   name: '',
-  age: '',
-  country: '',
   dob: '',
   email: '',
   role: 'student',
@@ -173,8 +145,6 @@ const form = ref({
 
 const isFormValid = computed(() => {
   return form.value.name && 
-         form.value.age && 
-         form.value.country && 
          form.value.dob &&
          form.value.email && 
          form.value.role &&

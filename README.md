@@ -1,5 +1,7 @@
 # School Management System
 
+A modern Vue.js 3 web application for managing school operations including students, teachers, classrooms, and grades.
+
 ## 🚀 Quick Start
 
 ### Prerequisites
@@ -47,12 +49,27 @@ The application will be available at `http://localhost:3000`
 - **Styling**: Tailwind CSS
 - **Build Tool**: Vite
 
+## 📁 Project Structure
+
+```
+src/
+├── api/          # API configuration
+├── components/   # Reusable components
+├── config/       # Configuration files
+├── router/       # Vue Router setup
+├── services/     # API services
+├── store/        # State management
+├── utils/        # Helper functions
+├── views/        # Page components
+└── App.vue       # Root component
+```
 
 ## 🔧 Available Scripts
 
 ```bash
 npm run dev      # Start development server
 npm run build    # Build for production
+npm run preview  # Preview production build
 ```
 
 ## 📋 Key Features
@@ -63,3 +80,26 @@ npm run build    # Build for production
 - **Responsive Design**: Mobile-friendly interface
 - **Real-time Search**: Search across students and classrooms
 - **Error Handling**: Comprehensive error management
+
+## 🔒 Security
+
+- JWT token validation
+- Role-based route protection
+- Input validation
+- Automatic session management
+
+## 📱 Browser Support
+
+- Chrome, Firefox, Safari, Edge (latest versions)
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Open a Pull Request
+
+## 📄 License
+
+MIT License - see LICENSE file for details.
